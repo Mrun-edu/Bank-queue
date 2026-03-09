@@ -60,7 +60,7 @@ def tekil_simulasyon():
         elif olay_turu == "bitis":
             # Gelen müşteri sistemden ayrılır
             if len(kuyruk) > 0:
-                # Kuyruk doluysa sıradaki müşteriyi (FIFO) al ve onun servis başlamasını planla
+                # Kuyruk doluysa sıradaki müşteriyi al ve onun servis başlamasını planla
                 siradaki_musteri_gelis = kuyruk.pop(0)
                 olaylar_listesi.append((zaman, "servis_baslamasi", siradaki_musteri_gelis))
             else:
@@ -99,7 +99,7 @@ def ana_program():
     plt.figure(figsize=(10, 6))
     plt.hist(tum_bekleme_sureleri, bins=30, color='skyblue', edgecolor='black', alpha=0.7)
     
-    # Ortalama değerin grafikte dik bir çizgi ile gösterilmesi (İsteğe bağlı güzel bir eklenti)
+    # Ortalama değerin grafikte dik bir çizgi ile gösterilmesi
     plt.axvline(np.mean(tum_bekleme_sureleri), color='red', linestyle='dashed', linewidth=2, label=f'Genel Ortalama: {np.mean(tum_bekleme_sureleri):.2f}')
     
     plt.title('10 Simülasyonda Tüm Müşterilerin Bekleme Süresi Histogramı (M/M/1)')
