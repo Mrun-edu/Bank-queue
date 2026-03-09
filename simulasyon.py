@@ -22,11 +22,11 @@ def tekil_simulasyon():
     
     # Döngü olay listesi boşalana veya tüm işlemler tamamlanana kadar döner
     while len(olaylar_listesi) > 0:
-        # Olayları zamana göre sıralar ve en erken gerçekleşecek olan(ilk sıradaki) olayı çekeriz
+        # Olayları zamana göre sıralar ve ilk sıradaki olayı çekeriz
         olaylar_listesi.sort(key=lambda x: x[0])
         guncel_olay = olaylar_listesi.pop(0)
         
-        # Olay bilgilerini ayrıştır ve saat bilgisini (zaman) güncelle
+        # Olay bilgilerini ayrıştır ve saat bilgisini güncelle
         zaman, olay_turu, musteri_gelis_zamani = guncel_olay
         
         # --- Müşteri Gelişi (Arrival) ---

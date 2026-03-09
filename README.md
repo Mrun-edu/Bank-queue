@@ -11,17 +11,33 @@ Bu proje, Python kullanılarak geliştirilmiş olay tabanlı (event-driven) bir 
 
 ## Kurulum ve Gereksinimler
 
-Projenin çalışması için bilgisayarınızda Python 3 yüklü olmalıdır. Projenin bağımlılıklarını kurmak için terminalinizde aşağıdaki komutu çalıştırabilirsiniz:
+Projenin çalışması için bilgisayarınızda Python 3 yüklü olmalıdır. Projenin bağımlılıklarını izole bir ortamda kurmak için sanal ortam (virtual environment) kullanılması önerilir.
 
-```bash
-pip install -r requirements.txt
-```
+1. Bir sanal ortam (venv) oluşturun:
+    ```bash
+    python -m venv .venv
+    ```
+
+2. Sanal ortamı aktifleştirin:
+    - **Windows için:**
+        ```bash
+        .venv\Scripts\activate
+        ```
+    - **macOS/Linux için:**
+        ```bash
+        source .venv/bin/activate
+        ```
+
+3. Gerekli kütüphaneleri yükleyin:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 *(Kullanılan başlıca kütüphaneler: `numpy` ve `matplotlib`)*
 
 ## Kullanım
 
-Gerekli kurulumları yaptıktan sonra simülasyonu başlatmak için şu komutu çalıştırın:
+Sanal ortamınız aktif durumdayken simülasyonu başlatmak için şu komutu çalıştırın:
 
 ```bash
 python simulasyon.py
